@@ -34,26 +34,27 @@ The supplied RALO configuration specifies a 256-unit hidden head. The manuscript
 
 | Path | Contents |
 |---|---|
-| `src/lung severity assesmnt/models/HySMamba_regression.py` | Attached hybrid model, CoAG, fusion, projection and ablations |
-| `src/lung severity assesmnt/models/DINO_encoder_regression.py` | Attached encoder regression baseline |
-| `src/lung severity assesmnt/models/tiny_vim/tvimblock.py` | Attached TViMBlock, SS2D and selective-scan interface |
-| `src/lung severity assesmnt/datasets/pkl_dataset.py` | Per-COVID-19 CSV and RALO raw/expanded loaders and split indices |
-| `src/lung severity assesmnt/trainer.py` | Attached Accelerate trainer and checkpoint manager |
-| `src/lung severity assesmnt/utils/data.py` | Attached image transform builder |
+| `src/lung_severity_assesmnt/models/HySMamba_regression.py` | Attached hybrid model, CoAG, fusion, projection and ablations |
+| `src/lung_severity_assesmnt/models/DINO_encoder_regression.py` | Attached encoder regression baseline |
+| `src/lung_severity_assesmnt/models/tiny_vim/tvimblock.py` | Attached TViMBlock, SS2D and selective-scan interface |
+| `src/lung_severity_assesmnt/datasets/pkl_dataset.py` | Per-COVID-19 CSV and RALO raw/expanded loaders and split indices |
+| `src/lung_severity_assesmnt/trainer.py` | Attached Accelerate trainer and checkpoint manager |
+| `src/lung_severity_assesmnt/utils/data.py` | Attached image transform builder |
 | `configs/dino_ViM_CT.py` | Supplied CT experiment settings, portable dataset paths |
 | `configs/dino_ViM_ralo.py` | Supplied RALO settings, 256-unit head |
 | `configs/dino_ViM_ralo_512.py` | RALO structural variant for a matching 512-unit checkpoint |
 | `scripts/` | Training launcher, evaluation, CUDA check, and source validation |
 | `docs/source_manifest.json` | Mapping and checksums of the supplied code files |
-| `docs/implementation_notes.md` | Packaging changes and reproducibility details |
 
-The `lung_severity_assesmnt` package name is retained for compatibility with the attached code and registry names.
+The Python package is located in `src/lung_severity_assesmnt`.
 
 ## Installation
 
 Use Python 3.10 or later and a CUDA-capable NVIDIA GPU for the supplied state-space implementation. Install the PyTorch/torchvision pair appropriate for your CUDA environment, then install this package:
 
 ```bash
+git clone https://github.com/GaPaMa/HyS-Mamba-for-Pulmonary-Severity-Assessment.git
+cd HyS-Mamba-for-Pulmonary-Severity-Assessment
 python -m venv .venv
 source .venv/bin/activate
 pip install -U pip
@@ -172,7 +173,7 @@ Simple projection uses four TViMBlocks in fusion and none in projection. BiConvV
 
 ## Code provenance and use
 
-The core hybrid model, baseline, TViMBlock, trainer, registry, metrics, optimizers, and schedulers retain the supplied source bytes. Packaging fixes, portable paths, and new entry points are listed in [implementation notes](docs/implementation_notes.md). The source validation command is:
+Source-file checksums are recorded in `docs/source_manifest.json`. Validate the source, configuration settings, and local documentation links with:
 
 ```bash
 python scripts/validate_source.py

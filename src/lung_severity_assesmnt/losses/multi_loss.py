@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from typing import Dict, Any, List, Optional
-from age_estimation.registry import LOSSES
+from lung_severity_assesmnt.registry import LOSSES
 def RegressionCenterLoss(*args, **kwargs):
     raise NotImplementedError("Center loss is not included; use the supplied MAE/MSE medical configs.")
 

@@ -14,9 +14,9 @@ def main():
     args = parser.parse_args()
     import torch
     from torch.utils.data import DataLoader
-    from age_estimation.configs import read_config
-    from age_estimation.registry import DATASETS, METRICS, MODELS
-    from age_estimation.utils.reproducibility import ensure_state_space
+    from lung_severity_assesmnt.configs import read_config
+    from lung_severity_assesmnt.registry import DATASETS, METRICS, MODELS
+    from lung_severity_assesmnt.utils.reproducibility import ensure_state_space
     if not torch.cuda.is_available():
         raise RuntimeError("The provided TViMBlock requires a CUDA GPU.")
     cfg = read_config(args.config_file)

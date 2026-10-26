@@ -28,7 +28,7 @@ def validate():
 
     for path in (ROOT / "src").rglob("*.py"):
         for node in ast.walk(ast.parse(path.read_text())):
-            if isinstance(node, ast.ImportFrom) and node.module and node.module.startswith("age_estimation"):
+            if isinstance(node, ast.ImportFrom) and node.module and node.module.startswith("lung_severity_assesmnt"):
                 target = ROOT / "src" / node.module.replace(".", "/")
                 assert target.with_suffix(".py").is_file() or (target / "__init__.py").is_file(), (path, node.module)
     print("Absolute package import targets: passed")
@@ -59,13 +59,13 @@ def validate():
             os.environ["HYSMAMBA_DATA_ROOT"] = previous
     print("Portable configs and output/head settings: passed")
 
-    config_api = runpy.run_path(str(ROOT / "src/age_estimation/configs.py"))
+    config_api = runpy.run_path(str(ROOT / "src/lung_severity_assesmnt/configs.py"))
     for path in (ROOT / "configs").glob("*.py"):
         json.dumps(config_api["read_config"](str(path)))
     print("Author config loader and JSON serialization: passed")
 
     # Execute only the actual split function and constants; no third-party imports.
-    tree = ast.parse((ROOT / "src/age_estimation/datasets/pkl_dataset.py").read_text())
+    tree = ast.parse((ROOT / "src/lung_severity_assesmnt/datasets/pkl_dataset.py").read_text())
     selected = [node for node in tree.body if
                 (isinstance(node, ast.FunctionDef) and node.name == "_build_split_indices") or
                 (isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id in

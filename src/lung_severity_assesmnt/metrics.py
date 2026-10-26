@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from typing import Dict, List, Union
-from age_estimation.registry import METRICS
+from lung_severity_assesmnt.registry import METRICS
 
-@METRICS.register('age_estimation_metrics')
+@METRICS.register('lung_severity_assesmnt_metrics')
 class AgeEstimationMetrics(nn.Module):
     """
     A module to compute multiple age estimation metrics.

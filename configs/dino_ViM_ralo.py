@@ -124,7 +124,7 @@ trainer = dict(
 
 
      metrics = dict(
-          type = "age_estimation_metrics",
+          type = "lung_severity_assesmnt_metrics",
           metrics = ["mae","pc","cs_0.5","cs_1.0"],
           dim_names= ["GE","LO"],
 

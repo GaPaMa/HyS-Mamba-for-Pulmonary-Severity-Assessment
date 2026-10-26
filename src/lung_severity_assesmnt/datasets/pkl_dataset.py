@@ -9,8 +9,8 @@ import random
 from torch.utils.data import Dataset
 from typing import Optional, Dict, Any, List, Union, Tuple
 
-from age_estimation.registry import DATASETS
-from age_estimation.utils.data import get_transform
+from lung_severity_assesmnt.registry import DATASETS
+from lung_severity_assesmnt.utils.data import get_transform
 
 
 def _natural_key(s: str):

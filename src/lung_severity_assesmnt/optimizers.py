@@ -1,5 +1,5 @@
 import torch
-from age_estimation.registry import OPTIMIZERS
+from lung_severity_assesmnt.registry import OPTIMIZERS
 
 @OPTIMIZERS.register('Adam')
 def load_adam_optimizer(**kwargs):

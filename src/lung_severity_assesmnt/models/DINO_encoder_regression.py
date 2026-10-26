@@ -7,7 +7,7 @@ import torch.nn.functional as F
 import timm
 from transformers import ViTModel
 
-from age_estimation.registry import MODELS
+from lung_severity_assesmnt.registry import MODELS
 
 
 def _gap(x: torch.Tensor) -> torch.Tensor:

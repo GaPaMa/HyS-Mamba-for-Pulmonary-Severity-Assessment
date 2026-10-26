@@ -17,7 +17,7 @@ except Exception:
 
 from transformers import ViTModel
 
-from age_estimation.registry import MODELS
+from lung_severity_assesmnt.registry import MODELS
 
 
 # --------------------- small helpers ---------------------
@@ -46,7 +46,7 @@ def _try_import_tvimblock():
     Fallback to a safe conv-MLP block if the CUDA op isn't available.
     """
     try:
-        from age_estimation.models.tiny_vim.tvimblock import TViMBlock  # your repo path
+        from lung_severity_assesmnt.models.tiny_vim.tvimblock import TViMBlock  # your repo path
         return TViMBlock, True
     except Exception:
         return None, False

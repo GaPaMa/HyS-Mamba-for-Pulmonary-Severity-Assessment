@@ -6,7 +6,7 @@ def main():
     try:
         import torch
         import selective_scan_cuda
-        from age_estimation.models.tiny_vim.tvimblock import TViMBlock
+        from lung_severity_assesmnt.models.tiny_vim.tvimblock import TViMBlock
         if not torch.cuda.is_available():
             raise RuntimeError("A CUDA GPU is required by the supplied TViMBlock.")
         block = TViMBlock(hidden_dim=256, index=0).cuda()

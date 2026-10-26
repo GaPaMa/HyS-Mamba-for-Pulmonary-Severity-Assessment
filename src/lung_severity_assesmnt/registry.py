@@ -123,9 +123,9 @@ class Registry:
         return f'{self._name}({list(self._module_dict.keys())})'
 
 
-DATASETS = Registry('dataset', locations=['age_estimation.datasets'])
-MODELS = Registry('model', locations=['age_estimation.models'])
-OPTIMIZERS = Registry('optimizer', locations=['age_estimation.optimizers'])
-SCHEDULERS = Registry('scheduler', locations=['age_estimation.schedulers'])
-LOSSES = Registry('loss', locations=['age_estimation.losses'])
-METRICS = Registry('metric', locations=['age_estimation.metrics'])
+DATASETS = Registry('dataset', locations=['lung_severity_assesmnt.datasets'])
+MODELS = Registry('model', locations=['lung_severity_assesmnt.models'])
+OPTIMIZERS = Registry('optimizer', locations=['lung_severity_assesmnt.optimizers'])
+SCHEDULERS = Registry('scheduler', locations=['lung_severity_assesmnt.schedulers'])
+LOSSES = Registry('loss', locations=['lung_severity_assesmnt.losses'])
+METRICS = Registry('metric', locations=['lung_severity_assesmnt.metrics'])

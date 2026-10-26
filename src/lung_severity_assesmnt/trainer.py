@@ -20,7 +20,7 @@ except ImportError:
     MLFLOW_AVAILABLE = False
     logger.warning("MLflow not available. Install with: pip install mlflow")
 
-from age_estimation.registry import DATASETS, MODELS, OPTIMIZERS, SCHEDULERS, LOSSES, METRICS
+from lung_severity_assesmnt.registry import DATASETS, MODELS, OPTIMIZERS, SCHEDULERS, LOSSES, METRICS
 
 
 class CheckpointManager:
@@ -283,7 +283,7 @@ class AgeEstimationTrainer:
         mlflow.set_tracking_uri(f"file://{mlflow_dir_abs}")
         
         # Set experiment name
-        experiment_name = self.configs.get('project_name', 'age_estimation')
+        experiment_name = self.configs.get('project_name', 'lung_severity_assesmnt')
         mlflow.set_experiment(experiment_name)
         
         # End any existing run
@@ -600,7 +600,7 @@ class AgeEstimationTrainer:
         
         # Initialize trackers
         self.accelerator.init_trackers(
-            project_name=self.configs.get('project_name', 'age_estimation'),
+            project_name=self.configs.get('project_name', 'lung_severity_assesmnt'),
             config=self._flatten_dict(self.configs.to_dict())
         )
                

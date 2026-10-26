@@ -1,5 +1,5 @@
 import torch
-from age_estimation.registry import SCHEDULERS
+from lung_severity_assesmnt.registry import SCHEDULERS
 
 @SCHEDULERS.register('CosineAnnealingLR')
 def load_cosine_annealing_lr_scheduler(**kwargs):

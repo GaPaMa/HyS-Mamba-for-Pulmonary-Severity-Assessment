@@ -1,8 +1,8 @@
 """Run the attached author trainer with explicit seeding and VSS verification."""
 from accelerate.utils import set_seed
-from age_estimation.configs import parse_configs
-from age_estimation.trainer import AgeEstimationTrainer
-from age_estimation.utils.reproducibility import ensure_state_space
+from lung_severity_assesmnt.configs import parse_configs
+from lung_severity_assesmnt.trainer import AgeEstimationTrainer
+from lung_severity_assesmnt.utils.reproducibility import ensure_state_space
 
 
 class HySMambaTrainer(AgeEstimationTrainer):
