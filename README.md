@@ -34,12 +34,12 @@ The supplied RALO configuration specifies a 256-unit hidden head. The manuscript
 
 | Path | Contents |
 |---|---|
-| `src/age_estimation/models/HySMamba_regression.py` | Attached hybrid model, CoAG, fusion, projection and ablations |
-| `src/age_estimation/models/DINO_encoder_regression.py` | Attached encoder regression baseline |
-| `src/age_estimation/models/tiny_vim/tvimblock.py` | Attached TViMBlock, SS2D and selective-scan interface |
-| `src/age_estimation/datasets/pkl_dataset.py` | Per-COVID-19 CSV and RALO raw/expanded loaders and split indices |
-| `src/age_estimation/trainer.py` | Attached Accelerate trainer and checkpoint manager |
-| `src/age_estimation/utils/data.py` | Attached image transform builder |
+| `src/lung severity assesmnt/models/HySMamba_regression.py` | Attached hybrid model, CoAG, fusion, projection and ablations |
+| `src/lung severity assesmnt/models/DINO_encoder_regression.py` | Attached encoder regression baseline |
+| `src/lung severity assesmnt/models/tiny_vim/tvimblock.py` | Attached TViMBlock, SS2D and selective-scan interface |
+| `src/lung severity assesmnt/datasets/pkl_dataset.py` | Per-COVID-19 CSV and RALO raw/expanded loaders and split indices |
+| `src/lung severity assesmnt/trainer.py` | Attached Accelerate trainer and checkpoint manager |
+| `src/lung severity assesmnt/utils/data.py` | Attached image transform builder |
 | `configs/dino_ViM_CT.py` | Supplied CT experiment settings, portable dataset paths |
 | `configs/dino_ViM_ralo.py` | Supplied RALO settings, 256-unit head |
 | `configs/dino_ViM_ralo_512.py` | RALO structural variant for a matching 512-unit checkpoint |
@@ -47,7 +47,7 @@ The supplied RALO configuration specifies a 256-unit hidden head. The manuscript
 | `docs/source_manifest.json` | Mapping and checksums of the supplied code files |
 | `docs/implementation_notes.md` | Packaging changes and reproducibility details |
 
-The `age_estimation` package name is retained for compatibility with the attached code and registry names.
+The `lung_severity_assesmnt` package name is retained for compatibility with the attached code and registry names.
 
 ## Installation
 
